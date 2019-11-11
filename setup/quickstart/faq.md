@@ -159,6 +159,12 @@ This can be coupled with `--omit-config` in a local installation to provide a
 taylored way of deploying & configuring only the services you want on the
 machines you care about.
 
+## What is the best way to delete a Spinnaker deployment?
+
+You can run the command `hal deploy clean` to delete an existing Spinnaker deployment. Note, this command destroys all Spinnaker artifacts in your target deployment environment. So, use it with caution and backup your configuration if you want to restore them. 
+
+Once Spinnaker is deleted, you can delete Halyard by running `sudo ~/.hal/uninstall.sh`
+
 ## I want to run Halyard behind a proxy
 
 In the file under `/opt/halyard/bin/halyard`, add the necessary proxy
